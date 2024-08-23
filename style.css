@@ -116,9 +116,6 @@ footer > *{
 
     display: flex;
     flex-wrap: wrap;
- 
-
-    border: 1px solid black;
 }
 
 .grid{
@@ -135,6 +132,10 @@ footer > *{
     line-height: 50px;
     text-align: center;
     position: relative;
+}
+
+.grid-100{
+    flex-basis: calc(100% / 10 - 2px);
 }
 
 @property --angle{
