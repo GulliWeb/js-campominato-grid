@@ -13,5 +13,7 @@ function play() {
         grid.innerText = i
         container.appendChild(grid)
     }    
+
+    document.querySelector('footer').classList.add('d-visible')
 }
 
