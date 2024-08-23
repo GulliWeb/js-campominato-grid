@@ -1,8 +1,9 @@
+// Raccolta dati dal DOM
 const container = document.getElementById('grid-container')
 
 // Al click del pulsante play genero 100 caselle
 function play() {
-    if (container.querySelectorAll('.grid').length > 0) {
+    if (container.querySelectorAll('.grid').length >= 100) {
         return
     }
 
