@@ -14,6 +14,30 @@ body {
     font-family: monospace;
 }
 
+/* IMG */
+figure{
+    width: 60px;
+    margin: 0 10px;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* Title page */
+h1{
+    margin-left: 10px;
+
+    color: white;
+
+    font-size: 50px;
+    text-align: center;
+}
+
+h1:hover{
+    color: red;
+}
+
 /* Nav */
 nav, footer{
     background-color: #4158D0;
@@ -27,14 +51,11 @@ nav, footer{
     align-items: center;
 }
 
-footer > *{
-    margin-left: 20px;
-    color: white;
-}
-
 .left, .right{
     display: flex;   
 }
+
+/* Right nav */
 
 .right{
     margin-right: 10px;
@@ -44,7 +65,7 @@ footer > *{
     margin-left: 10px;
 }
 
-button, .right > div{
+button, .right *{
     padding: 5px 10px;
 
     background-color: #e73c7e;
@@ -55,25 +76,25 @@ button, .right > div{
 }
 
 select{
+    margin-left: 2px;
     background-color: #e73c7e;
     color: white;
     cursor: pointer;
 }
 
-/* IMG */
-figure{
-    width: 60px;
-    margin: 0 10px;
+button:hover, select:hover{
+    color: gray;
 }
 
-img{
-    max-width: 100%;
-}
-
-h1{
+button:active, select:active{
     color: white;
-    font-size: 50px;
-    text-align: center;
+}
+
+/* Footer */
+
+footer > *{
+    margin-left: 20px;
+    color: white;
 }
 
 @keyframes gradient {
@@ -88,7 +109,7 @@ h1{
 	}
 }
 
-/* Grid */
+/* Grid  elements & layout */
 #grid-container{
     max-width: 500px;
     margin: 50px auto;
@@ -121,8 +142,6 @@ h1{
     initial-value: 0deg;
     inherits: false;
 }
-
-
 
 @property --angle{
     syntax: "<angle>";
