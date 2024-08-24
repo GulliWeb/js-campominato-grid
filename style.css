@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 /* Utils */
 .d-none{
     display: none;
@@ -101,6 +100,10 @@ button:active, select:active{
 }
 
 /* Footer */
+footer{
+    position: fixed;
+    bottom: 0;
+}
 
 footer > *{
     margin-left: 20px;
