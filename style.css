@@ -61,7 +61,8 @@ nav, footer{
 }
 
 .left, .right{
-    display: flex;   
+    display: flex; 
+    align-items: center;  
 }
 
 /* Right nav */
@@ -131,12 +132,10 @@ footer > *{
     height: 50px;
     flex-basis: calc(100% / 9 - 2px);
 
-
-   margin: 2px 1px;
+    margin: 2px 1px;
 
     color: white;
     background-color: black;
-
 
     line-height: 50px;
     text-align: center;
@@ -186,5 +185,26 @@ footer > *{
     to{
         --angle: 360deg
     }
+}
+
+/* Click dynamic JS class */
+.azure-click{
+    background-color: azure;
+    color: black;
+}
+
+.click::after, .click::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 70%, blue);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 3S spin linear infinite;
 }
 
