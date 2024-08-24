@@ -146,6 +146,18 @@ footer > *{
     flex-basis: calc(100% / 10 - 2px);
 }
 
+.grid:hover{
+    background-color: gray;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.grid:active{
+    color: blue;
+}
+
+
 @property --angle{
     syntax: "<angle>";
     initial-value: 0deg;
@@ -191,6 +203,7 @@ footer > *{
 .azure-click{
     background-color: azure;
     color: black;
+
 }
 
 .click::after, .click::before{
