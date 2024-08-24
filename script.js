@@ -2,14 +2,27 @@
 const container = document.getElementById('grid-container')
 // Al click del pulsante play genero 100 caselle
 function play() {
-    if (container.querySelectorAll('.grid').length >= 100) {
-        // location.reload()
+
+    /* Richiamo funzione per stabilire il livello e quante celle devono stare su una riga */
+    levels()
+    /* Controllo per evitare che si crei un numero di celle ripetuto */
+    if (container.querySelectorAll('.grid').length >= levels()) {
+        alert('Campo minato già generato! per generarne uno nuovo premere il pulsante "NEW GAME"!')
         return
     }
-
-    for (let i = 1; i <= 100; i++) {
+  
+    for (let i = 1; i <= levels(); i++) {
         const grid = document.createElement('div')
-        grid.classList.add('grid', 'grid-100')
+        /* Controllo per stabilire il numero di celle su una riga */
+        if (levels() == 100) {
+            grid.classList.add('grid-10')
+        } else if (levels() == 81) {
+            grid.classList.add('grid-9')
+        } else if (levels() == 49) {
+            grid.classList.add('grid-7')
+            
+        }
+        grid.classList.add('grid')
         grid.innerText = i
         container.appendChild(grid)
 
@@ -22,6 +35,17 @@ function play() {
 
 // Al click di ogni cella stampiamo in console il numero di essa e coloriamola di azzurro
 function cellClick(grid, index) {
-    grid.classList.add('azure-click', 'click')   
+    grid.classList.add('azure-click', 'click') 
     console.log(index) 
+}
+
+function levels() {
+    level = document.getElementById('slc-dif')
+    if (level.value == 1) {
+        level = 100
+    } else if (level.value == 2){
+        level = 81
+    } else if (level.value == 3)
+        level  = 49
+    return level
 }

@@ -142,8 +142,16 @@ footer > *{
     position: relative;
 }
 
-.grid-100{
+.grid-10{
     flex-basis: calc(100% / 10 - 2px);
+}
+
+.grid-9{
+    flex-basis: calc(100% / 9 - 2px);
+}
+
+.grid-7{
+    flex-basis: calc(100% / 7 - 2px);
 }
 
 .grid:hover{
